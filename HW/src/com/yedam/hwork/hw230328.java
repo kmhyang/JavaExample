@@ -19,10 +19,9 @@ public class hw230328 {
 		val /=5;
 		
 		// 문제2) 변수 val의 값이 양수일 경우엔 변수 값을, 아닐 경우엔 0을 담는 변수를 선언하세요. (단, 삼항연산자를 사용)
-		int aa=0;
-		int intResult = (val>0) ? val : aa;
-		
-		System.out.println(intResult);
+        int result = val > 0 ? val : 0;
+        System.out.println(result);
+        System.out.println("val의 값은" + result);
 		
 		/* 문제 3) 다음과 같이 두 개의 정수가 주어졌을 경우 
 	  			    두 정 수 중에서 음수가 있다면 'One of a or b is negative number'를,
@@ -31,11 +30,11 @@ public class hw230328 {
 		int b = -8;
 		String strResult;
 		if(a <0 || b<0) {
-			System.out.println("One of a or b is negative number");
+			strResult = "One of a or b is negative number";
 		}else {
-			System.out.println("both a and b are zero or more");
+			strResult = "both a and b are zero or more";
 		}
-		//System.out.println(strResult);
+		System.out.println(strResult);
 
 		// 문제4) 차례대로 x와 y의 값이 주어졌을 때 어느 사분면에 해당되는지 출력하도록 구현하세요.
 		// 각 사분면에 해당 하는 x와 y의 값은 아래를 참조하세요.
@@ -129,7 +128,7 @@ public class hw230328 {
 		}System.out.println(" ");
 		
 		
-		//7번
+		//169p 7번
 		boolean run = true;
 		int balance = 0;
 		
@@ -138,28 +137,22 @@ public class hw230328 {
 			System.out.println("1. 예금 | 2. 출금 | 3. 잔고 | 4. 종료");
 			System.out.println("--------------------------");
 			System.out.print("선택> ");
-			String str7 = scanner.nextLine();
-//			switch(str7) {
-//				case "예금":
-//					System.out.print("1");
-//					System.out.println("예금액>10000 ");
-//					break;
-//				case "출금":
-//					System.out.print("2");
-//					System.out.println("출금액>2000 ");
-//					break;
-//				case "잔고":
-//					System.out.print("3");
-//					System.out.println("잔고>8000 ");
-//					break;
-//				case "종료":
-//					System.out.print("4");
-//					break;
-//			}
+			String str = scanner.nextLine();
+			String value = scanner.nextLine();
+			if(value.equals("1")) {
+				System.out.println("예금액> 10000");
+			}
+			if(value.equals("2")) {
+				System.out.println("출금액> 2000");
+			}
+			if(value.equals("3")) {
+				System.out.println("잔액> 8000");
+			}
+			if(value.equals("4")) {
+				System.out.println("프로그램 종료");
+				break;
+			}
 		}
-		System.out.println("프로그램 종료");
-		
-		
-		
+
 	}
 }
