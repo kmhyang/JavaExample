@@ -1,6 +1,6 @@
 package com.yedam.array;
 
-public class Ex10 {
+public class Ex10_oldnew {
 	public static void main(String[] args) {
 		//참조 배열
 		String[] strArray = new String[3];

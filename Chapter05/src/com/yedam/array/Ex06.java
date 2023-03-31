@@ -15,43 +15,44 @@ public class Ex06 {
 			System.out.println("---------------------------");
 			System.out.println("선택> ");
 			
-			int selectNo = Integer.parseInt(sc.nextLine());
+			int num = Integer.parseInt(sc.nextLine());
 			
-			if(selectNo==1) {
-				System.out.println("학생수 입력하세요");
-				studentNum = Integer.parseInt(sc.nextLine());
-				scores = new int[studentNum];
-				System.out.println("학생수> "+ scores.length);
-				
-			}else if(selectNo==2) {
-				for(int i=0; i<scores.length; i++) {
-					System.out.println("점수 입력하세요");
-					scores[i] = Integer.parseInt(sc.nextLine());
-					System.out.println("scores["+i+"]"+"> "+ scores[i]);
+			while(run) {
+				if(num == 1) {
+					studentNum = num;
+					scores = new int[studentNum];
+				}else if(num == 2) {
+					for(int i=0; i<scores.length; i++) {
+						System.out.println("점수를 입력하세요");
+						scores[i] = Integer.parseInt(sc.nextLine());
+						System.out.println(scores[i]);
+					}
+				}else if(num == 3) {
+					for(int i=0; i<scores.length; i++) {
+						System.out.println(scores[i]);
+					}
+				}else if(num == 4) {
+					int sum=0;
+					int avg=0;
+					int max = scores[0];
+					for(int i=0; i<scores.length; i++) {
+						sum += scores[i];
+					}
+					avg = sum/scores.length;
+					for(int i=0; i<scores.length; i++) {
+						if(scores[i] < max) {
+							max = scores[i];
+						}
+					}
+					System.out.println((double) avg);
+					System.out.println(max);
+					
+				}else if(num == 5) {
+					System.out.println("종료");
+					break;
 				}
-			}else if(selectNo==3) {
-				for(int i=0; i<scores.length; i++) {
-					System.out.println("scores["+i+"]"+"> "+ scores[i]);
-				}
-			}else if(selectNo==4) {
-				int sum = 0;
-				int avg = 0;
-				int max = scores[0];
-				for(int i=0; i<scores.length; i++) {
-					sum += scores[i];
-				}
-				avg = sum/scores.length;
-				for(int i=0; i<scores.length; i++) {
-					if(max < scores[i]) {
-						max = scores[i];
-				}
-				System.out.println("최고점수: " + max);
-				System.out.println("평균점수: " + (double) avg);
-				}
-			}else if(selectNo==5) {
-				System.out.println("프로그램 종료");
-				break;
 			}
+			
 		}
 	}
 }

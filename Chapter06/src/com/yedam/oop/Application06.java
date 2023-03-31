@@ -19,7 +19,9 @@ public class Application06 {
 		Product[] proAry = null;
 		
 		while(true) {
+			System.out.println("------------------------");
 			System.out.println("1.상품 수 | 2.상품 및 가격입력 | 3.제품별 가격 | 4.분석 | 5.종료");
+			System.out.println("------------------------");
 			System.out.println("메뉴를 입력하세요");
 			String selectNo = sc.nextLine();
 			
@@ -49,12 +51,20 @@ public class Application06 {
 				
 			}else if(selectNo.equals("4")) {
 				int max = proAry[0].price;
-				for(int i=0; i<proAry.length; i++) {
-					if(max < proAry[i].price) {
-						proAry[i].price = 0;
+				int maxIndex = 0;
+				int sum = 0;
+				for (int i = 0; i < proAry.length; i++) {
+					if (max < proAry[i].price) {
+						maxIndex = i;
 					}
-					System.out.println("총 합계 : "+proAry[i].sum());
 				}
+				System.out.println("최고가격 제품 [" + proAry[maxIndex].name + "]의 가격 : " + proAry[maxIndex].price);
+				for (int i = 0; i < proAry.length; i++) {
+					if (i != maxIndex) {
+						sum += proAry[i].price;
+					}
+				}
+				System.out.println("최고 가격 제외 다른제품 가격의 총합 : " + sum);
 				
 			}else if(selectNo.equals("5")) {
 				
