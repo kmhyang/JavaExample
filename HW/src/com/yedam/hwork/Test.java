@@ -41,6 +41,7 @@ public class Test {
 		
 		System.out.println();
 		System.out.println("===4번===");
+		
 //		4.
 		Scanner sc = new Scanner(System.in);
 		System.out.println("x 입력> ");
@@ -73,6 +74,9 @@ public class Test {
 				System.out.println("주사위 크기>");
 				size = sc.nextInt();
 				dice = new int[size];
+				if(size < 5 || size>10) {
+					System.out.println("5~10사이의 수를 입력하세요");
+				}
 			case 2:
 				int count = 0;
 				while(run) {
@@ -89,7 +93,7 @@ public class Test {
 				break;
 			case 3:
 				for(int i=0; i<size; i++) {
-					System.out.printf("%d은 %d번 나왔습니다.\n", i+1, dice[i]);
+					System.out.println((i+1)+"은 " + dice[i]+ "번 나왔습니다.");
 				}
 				break;
 			case 4:
