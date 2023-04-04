@@ -1,9 +1,12 @@
 package com.yedam.hw230403;
 
 public class ArcadeGame implements Keypad{
-	private int mode;
 	
-	public void RPGgame(int NORMAL_MODE) {
+	//현재 모드를 값으로 가지는 필드 생성
+	private int currentMode;
+	
+	public void RPGgame() {
+		this.currentMode = Keypad.NORMAL_MODE;
 		System.out.println("ArcadeGame 실행");
 	}
 	
@@ -19,29 +22,40 @@ public class ArcadeGame implements Keypad{
 
 	@Override
 	public void rightUpButton() {
-		if(mode == 0) {
+		switch (this.currentMode) {
+		case Keypad.NORMAL_MODE:
 			System.out.println("캐릭터가 일반 공격.");
-		}else if(mode == 1) {
+			break;
+		case Keypad.HARD_MODE:
 			System.out.println("캐릭터가 연속 공격.");
+			break;
 		}
 		
 	}
 
 	@Override
 	public void rightDownButton() {
-		if(mode == 0) {
+		switch (this.currentMode) {
+		case Keypad.NORMAL_MODE:
 			System.out.println("캐릭터가 HIT 공격.");
-		}else if(mode == 1) {
+			break;
+		case Keypad.HARD_MODE:
 			System.out.println("캐릭터가 Double HIT 공격.");
+			break;
 		}
 	}
 
 	@Override
 	public void changeMode() {
-		if(mode == 0) {
-			System.out.println("캐릭터가 캐릭터가 일반 공격.");
-		}else if(mode == 1) {
-			System.out.println("캐릭터가 HIT 공격.");
+		switch (this.currentMode) {
+		case Keypad.NORMAL_MODE:
+			this.currentMode = Keypad.HARD_MODE;
+			System.out.println("현재 모드 : HARD_MODE");
+			break;
+		case Keypad.HARD_MODE:
+			this.currentMode = Keypad.NORMAL_MODE;
+			System.out.println("현재 모드 : NORMAL_MODE");
+			break;
 		}
 	}
 

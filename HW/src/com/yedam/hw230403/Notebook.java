@@ -1,8 +1,10 @@
 package com.yedam.hw230403;
 
 public interface Notebook {
-	public static final int NOTEBOOK_MODE = 1;
-	
-	public abstract void writeDocumentaion();
-	public abstract void searchInternet();
+	//상수필드
+		public static final int NOTEBOOK_MODE = 1;
+		
+		//추상메소드
+		public abstract void writeDocumentation();
+		public abstract void searchInternet();
 }

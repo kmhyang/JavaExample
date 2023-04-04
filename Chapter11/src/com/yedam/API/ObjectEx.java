@@ -38,5 +38,20 @@ public class ObjectEx {
 		//new Member("열쇠") : "열쇠" 문자가 같아서 같은 해시코드를 가지게 됨 -> value = "또치"가 됨
 		
 		
+		
+		
+		
+		System.out.println("====toString()=====");
+		
+		Object obj = new Object();
+		System.out.println(obj.toString()); //obj의 toString 주소값 출력
+		
+		//Member 클래스에서 우클릭 - source - generate toString - id 오버라이딩
+		System.out.println(member.toString());
+		System.out.println(member); //toString 생략 가능
+		System.out.println(member2.toString());
+		System.out.println(member3.toString());
+		
+		
 	}
 }
