@@ -7,4 +7,5 @@ public interface Notebook {
 		//추상메소드
 		public abstract void writeDocumentation();
 		public abstract void searchInternet();
+		void changeMode();
 }

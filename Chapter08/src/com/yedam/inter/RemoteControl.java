@@ -9,6 +9,5 @@ public interface RemoteControl {
 	public void turnOn();
 	public abstract void turnOff();
 	public void setVolume(int volume);
-	
 
 }
