@@ -72,7 +72,10 @@ public class LottoApp {
 	}
 
 	private void makeNumber() {
+		//중복으로 나올 경우 77번줄 추가하는 이유
+		//각 위치마다 새로운 객체를 넣어주기 위해서 선언해줘야 함.
 		lotto = new int[6];
+		
 		for (int i = 0; i < 6; i++) {
 			// 랜덤 데이터 뽑기(배열에 데이터 저장)
 			lotto[i] = (int) (Math.random() * 45) + 1;
