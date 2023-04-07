@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="Chapter01/src"/>
+	<classpathentry kind="src" path="Chapter02/src"/>
+	<classpathentry kind="src" path="Chapter03/src"/>
+	<classpathentry kind="src" path="Chapter04/src"/>
+	<classpathentry kind="src" path="Chapter05/src"/>
+	<classpathentry kind="src" path="Chapter06/src"/>
+	<classpathentry kind="src" path="Chapter07/src"/>
+	<classpathentry kind="src" path="Chapter08/src"/>
+	<classpathentry kind="src" path="Chapter10/src"/>
+	<classpathentry kind="src" path="Chapter11/src"/>
+	<classpathentry kind="src" path="Chapter13/src"/>
+	<classpathentry kind="src" path="HR/src"/>
+	<classpathentry excluding="com/yedam/hwork/|com/yedam/hw0404/" kind="src" path="HW/src"/>
+	<classpathentry kind="src" path="HW/src/com/yedam/hw0404"/>
+	<classpathentry kind="src" path="HW/src/com/yedam/hwork"/>
+	<classpathentry kind="src" path="Member/src"/>
+	<classpathentry kind="src" path="ZZ/src"/>
+	<classpathentry kind="output" path="Chapter01/bin"/>
+</classpath>

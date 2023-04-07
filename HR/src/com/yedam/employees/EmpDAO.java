@@ -59,7 +59,8 @@ public class EmpDAO extends DAO{
 				//list에 서로 다른 사원 정보(=객체) row를 서로다른 객체에 저장하기 위함
 				emp = new EmpDTO();
 				
-				emp.setEmployeeId(rs.getInt("employee_id"));    //----★★★★조회된 컬럼명 ★★★★그대도 들어가야 함 , AS 줄 경우 바뀐 명으로 가져와야 함.
+				//----★★★★조회된 컬럼명 ★★★★그대도 들어가야 함 , AS 줄 경우 바뀐 명으로 가져와야 함.
+				emp.setEmployeeId(rs.getInt("employee_id"));    
 				emp.setLastName(rs.getString("last_name"));
 				emp.setSalary(rs.getDouble("salary"));
 				emp.setHireDate(rs.getDate("hire_date"));

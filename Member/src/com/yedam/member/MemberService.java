@@ -45,13 +45,12 @@ public class MemberService {
 		}
 		
 	}
-	
-	
+//	------------------------------------------------------------------------
 	public void logout() {
 		memberInfo = null;
 		System.out.println("로그아웃 성공");
 	}
-	
+//	------------------------------------------------------------------------
 	
 //	전체 조회
 	public void getMemberList() {
@@ -63,7 +62,8 @@ public class MemberService {
 			System.out.println("이름 : "+member.getName());
 		}
 	}
-	
+
+//	------------------------------------------------------------------------
 //	회원등록
 	public void memAdd() {
 		String id = "";
@@ -107,7 +107,8 @@ public class MemberService {
 			}
 			
 	}
-	
+
+//	------------------------------------------------------------------------
 //	회원 수정
 //	login 되어있는 사람의  수정 하는지 -> 실시간으로 로그인된 정보도 바꿔줘야 한다.
 //	login 안 되어있는 사람의 수정하는지
