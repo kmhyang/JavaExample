@@ -74,10 +74,4 @@ public class CustomerDAO extends DAO{
 	
 	
 	
-	
-	
-	
-	
-	
-	
 }
