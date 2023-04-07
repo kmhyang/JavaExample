@@ -15,7 +15,7 @@ public class Application {
 	public Application() {
 		run();
 	}
-
+////
 	private void run() {
 		while(true) {
 			System.out.println("1. 로그인 | 2. 종료");
